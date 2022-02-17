@@ -4,6 +4,6 @@
 
 int main()
 {
-  std::cout << "Hello, user!";
+  std::cout << "Hello, world!";
   return 0; // Возвратим ОС "код результата работы".
 }
