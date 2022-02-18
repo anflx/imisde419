@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+int main() {
+  float a;
+  cin >> a;
+  if (a > 0){
+    cout << "число положительное";
+  } else if (a < 0){
+     cout << "число отрицательное";
+
+  } else if (a==0) {
+    cout << "число равно нулю";
+
+  }
+  return 0;
+}
