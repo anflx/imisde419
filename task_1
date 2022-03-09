@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+  int n;
+  cin >> n;
+  int array[n];
+for (int i = 0; i < n; i++) {
+    cin >> array[i];
+  }
+  int min = array[0]; //Сравниваем каждый элемент массива с переменной min и кладем в нее минимальное значение
+   for (int i = 1; i < n; i++) {
+     if (min > array[i]){
+       min = array[i];
+     }
+   }
+  cout << "Минимальное значение: " << min << endl;
+  
+  int max = array[0]; //Сравниваем каждый элемент массива с переменной max и кладем в нее максимальное значение
+   for (int i = 1; i < n; i++) {
+     if (max < array[i]){
+       max = array[i];
+       }
+     }
+     cout << "Максимальное значение: " << max;
+  
+}
