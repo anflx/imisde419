@@ -1,11 +1,11 @@
 #include <iostream>
 using namespace std;
-int a, obr, start;
+int odd, obr, start;
 int perevert(int start) {
   while (start > 0) {
-    a = start % 10;
+    odd = start % 10;
     start = start / 10;
-    obr = obr*10 + a;
+    obr = obr*10 + odd;
     }
   return obr;  
 }
