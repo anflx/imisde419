@@ -1,0 +1,23 @@
+#include <iostream>
+#include <string>
+#include <sstream>
+using namespace std;
+ 
+int main()
+{
+    string str, start_a; //start_a - вспомогательная строка, которая равна отдельному слову в нашей вводимой строке
+    char letter;
+    letter = 'a';
+    cout << "input a string: ";
+    getline(cin, str); //вот тут программа работала только если юзать гетлайн
+    stringstream words(str);
+    while (words >> start_a)
+    {
+      if (start_a[0] == letter) {
+        cout << start_a << endl;
+        } 
+      
+    } //тут мы для каждого слова смотрели, равен ли его первый символ (start_a[0]) нашей букве (letter) и если равен, то выводили эти слова
+
+
+}
