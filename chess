@@ -1,0 +1,50 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+  int row, col, row_1, col_1, row_2, col_2, row_3, col_3, row_4, col_4, row_5, col_5, row_6, col_6, row_7, col_7, row_8, col_8;
+  
+  cout << "input row and coloumn: ";
+  cin >> row >> col;
+  row_1 = row + 2;
+  col_1 = col + 1;
+  row_2 = row + 2;
+  col_2 = col - 1;
+  row_3 = row - 2;
+  col_3 = col + 1;
+  row_4 = row - 2;
+  col_4 = col - 1;
+  row_5 = row + 1;
+  col_5 = col + 2;
+  row_6 = row - 1;
+  col_6 = col + 2;
+  row_7 = row + 1;
+  col_7 = col - 2;
+  row_8 = row - 1;
+  col_8 = col - 2;
+  
+  if (row_1 >= 1 && row_1 <= 8 && col_1 >= 1 && col_1 <= 8) {
+    cout << "possible position: " << row_1 << " " << col_1 << endl;
+  }
+  if (row_2 >= 1 && row_2 <= 8 && col_2 >= 1 && col_2 <= 8) {
+    cout << "possible position: " << row_2 << " " << col_2 << endl;
+  }
+  if (row_3 >= 1 && row_3 <= 8 && col_3 >= 1 && col_3 <= 8) {
+    cout << "possible position: " << row_3 << " " << col_3 << endl;
+  }
+  if (row_4 >= 1 && row_4 <= 8 && col_4 >= 1 && col_4 <= 8) {
+    cout << "possible position: " << row_4 << " " << col_4 << endl;
+  }
+  if (row_5 >= 1 && row_5 <= 8 && col_5 >= 1 && col_5 <= 8) {
+    cout << "possible position: " << row_5 << " " << col_5 << endl;
+  }
+  if (row_6 >= 1 && row_6 <= 8 && col_6 >= 1 && col_6 <= 8) {
+    cout << "possible position: " << row_6 << " " << col_6 << endl;
+  }
+  if (row_7 >= 1 && row_7 <= 8 && col_7 >= 1 && col_7 <= 8) {
+    cout << "possible position: " << row_7 << " " << col_7 << endl;
+  }
+  if (row_8 >= 1 && row_8 <= 8 && col_8 >= 1 && col_8 <= 8) {
+    cout << "possible position: " << row_8 << " " << col_8 << endl;
+  }
+}
