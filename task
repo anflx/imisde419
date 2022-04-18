@@ -1,0 +1,50 @@
+#include <iostream>
+using namespace std;
+
+int *razn(int n, int* number_1, int* number_2) {
+  int i; 
+  int *diff = new int[n];
+  for (i = 0; i < n; i++) {
+    diff[i] = number_1[i] - number_2[i];
+  }
+  return diff;
+}
+
+int *summ(int n, int* number_1, int* number_2) {
+ int i;
+  int *summ = new int[n];
+ for (i = 0; i < n; i++) {
+   summ[i] = number_1[i] + number_2[i];
+  }
+ return summ;
+}
+
+int main() {
+  int n; char c; int i;
+  int number_1[n];
+  int number_2[n];
+  cout << "Введите количество цифр в числах: ";
+  cin >> n;
+  cout << "Введите первое число: ";
+  for (i = 0; i < n; i++) {
+    cin >> number_1[i];
+  }
+  cout << "Если вы хотите отнять числа, нажмите '-', если прибавить '+' ";
+  cin >> c;
+  cout << "Введите второе число: ";
+  for (i = 0; i < n; i++) {
+    cin >> number_2[i];
+  }
+  if (c == '-') {
+    for (i = 0; i < n; i++) {
+    cout << *razn(n, number_1, number_2);
+   }
+  }
+    
+
+  if (c == '+') {
+    for (i = 0; i < n; i++) {
+    cout << *summ(n, number_1, number_2);
+   }
+  }
+}
