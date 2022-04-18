@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-int *razn(int n, int* number_1[], int* number_2[]) {
+int *razn(int n, int* number_1, int* number_2) {
   int i; 
   int *diff = new int[n];
   for (i = 0; i < n; i++) {
@@ -10,11 +10,11 @@ int *razn(int n, int* number_1[], int* number_2[]) {
   return diff;
 }
 
-int *summ(int n, int* number_1[], int* number_2[]) {
+int *summ(int n, int* number_1, int* number_2) {
  int i;
   int *summ = new int[n];
  for (i = 0; i < n; i++) {
-   summ[i] = number_1[i] - number_2[i];
+   summ[i] = number_1[i] + number_2[i];
   }
  return summ;
 }
@@ -36,10 +36,15 @@ int main() {
     cin >> number_2[i];
   }
   if (c == '-') {
-    cout << *razn(n, *number_1, *number_2);
+    for (i = 0; i < n; i++) {
+    cout << *razn(n, number_1, number_2);
+   }
   }
-  if (c == '+') {
-    cout << *summ(n, *number_1, *number_2);
-  }
+    
 
+  if (c == '+') {
+    for (i = 0; i < n; i++) {
+    cout << *summ(n, number_1, number_2);
+   }
+  }
 }
