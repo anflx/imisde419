@@ -1,0 +1,36 @@
+#include <iostream>
+
+using namespace std;
+
+struct drob {
+    int chisl;
+    int znam;
+};
+
+int NOD(int a, int b) {
+	while (a > 0 && b > 0) {
+		if (a > b) {
+			a = a % b;
+		}
+		else {
+			b = b % a;
+		}
+	}
+	return a + b;
+}
+
+
+int main()
+{
+  drob first;
+  cout << "Введите числитель дроби ";
+  cin >> first.chisl; 
+  cout << "Введите знаменатель дроби ";
+  cin >> first.znam;
+  int delitel = NOD(first.chisl, first.znam);
+  cout << "Сокращенная дробь:" << endl;
+  cout << first.chisl / delitel << endl;
+  cout << "__" << endl;
+  cout << endl;
+  cout << first.znam / delitel;
+}
