@@ -2,7 +2,7 @@
 
 using namespace std;
 
-struct drob {
+ struct drob {
     int chisl;
     int znam;
 };
@@ -17,20 +17,23 @@ int NOD(int a, int b) {
 		}
 	}
 	return a + b;
-}
+};
 
+void New(struct & drob){
+  int delitel = NOD(first.chisl, first.znam);
+  first.chisl = first.chisl / delitel;
+  first.znam = first.znam / delitel;
+};
 
 int main()
 {
-  drob first;
-  cout << "Введите числитель дроби ";
-  cin >> first.chisl; 
-  cout << "Введите знаменатель дроби ";
-  cin >> first.znam;
-  int delitel = NOD(first.chisl, first.znam);
-  cout << "Сокращенная дробь:" << endl;
-  cout << first.chisl / delitel << endl;
-  cout << "__" << endl;
-  cout << endl;
-  cout << first.znam / delitel;
+ drob first;
+ cout << "Введите числитель дроби ";
+ cin >> first.chisl; 
+ cout << "Введите знаменатель дроби ";
+ cin >> first.znam;
+ cout << "Сокращенная дробь:" << endl;
+ cout << first.chisl << endl;
+ cout << "__" << endl;
+ cout << first.znam << endl;
 }
