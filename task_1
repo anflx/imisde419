@@ -1,0 +1,16 @@
+using namespace std;
+#include <iostream>
+
+int main() {
+  int a; int b; int c;
+  cout << "input two numbers: ";
+  cin >> a >> b;
+  try {
+    int c = a / b;
+    cout << c;
+  }
+    catch (const std::exception & ex) {
+      cout << ex.what() << endl;
+      cout << "u cannot devide by 0";
+    }
+}

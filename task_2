@@ -1,0 +1,45 @@
+using namespace std;
+#include <iostream>
+
+int check(string a) {
+  string password;
+  cout << "enter password: " << endl;
+  cin >> password;
+  if (password == "Loh") {
+    cout << "enter is accepted" << endl;
+  }
+  else {
+   cout << "the password is wrong. try to enter again: ";
+   cin >> password;
+   if (password == "Loh") {
+   cout << "enter is accepted" << endl;
+  }
+  else {
+   cout << "the password is wrong. try to enter again: ";
+   cin >> password;
+   }
+  }
+   if (password == "Loh") {
+   cout << "enter is accepted" << endl;
+  }
+  else {
+    throw password;
+  }
+    
+    
+}
+int main() {
+  string login; string password;
+  cout << "enter your login: ";
+  cin >> login;
+  if (login == "VasyaPupkin") {
+  try { check(login);
+    }
+    catch (string password) {
+    cout << "enter is rejected";
+    }
+  }
+  else {
+    cout << "login is wrong";
+  }
+}
